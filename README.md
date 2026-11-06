@@ -1,6 +1,6 @@
 # Hedge Lab
 
-![Python](https://img.shields.io/badge/python-3.11+-blue)
+![Python](https://img.shields.io/badge/python-3.11+-blue) ![release](https://img.shields.io/github/v/release/risootooo/hedge-lab)
 ![Tests](https://img.shields.io/badge/tests-28%20passed-brightgreen)
 ![Data](https://img.shields.io/badge/data-real%20NSE%20bhavcopy-orange)
 ![License](https://img.shields.io/badge/license-MIT-green)
