@@ -1,7 +1,7 @@
 # Hedge Lab
 
 ![Python](https://img.shields.io/badge/python-3.11+-blue) ![release](https://img.shields.io/github/v/release/risootooo/hedge-lab)
-![Tests](https://img.shields.io/badge/tests-28%20passed-brightgreen)
+![Tests](https://img.shields.io/badge/tests-33%20passed-brightgreen)
 ![Data](https://img.shields.io/badge/data-real%20NSE%20bhavcopy-orange)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
@@ -106,7 +106,7 @@ and it is printed, per day, next to the numbers it failed to explain.
 pip install -r requirements.txt
 python main.py            # full study -> console, docs/results.json,
                           # docs/dashboard.html
-pytest                    # 28 tests
+pytest                    # 33 tests
 python tools/build_window.py   # regenerate data/book_window.csv
                                # from the raw bhavcopy archive
 ```

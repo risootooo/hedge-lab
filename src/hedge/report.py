@@ -19,6 +19,11 @@ def _fmt_rs(x):
 
 def _svg_lines(series, labels, colors, width=880, height=300, pad=46):
     """Multi-series line chart as inline SVG."""
+    if not series or all(len(s) == 0 for s in series):
+        return (f'<svg viewBox="0 0 {width} {height}" width="100%" '
+                f'xmlns="http://www.w3.org/2000/svg">'
+                f'<text x="{width // 2}" y="{height // 2}" fill="#94a3b8" '
+                f'font-size="14" text-anchor="middle">No data</text></svg>')
     all_y = [y for s in series for y in s]
     lo, hi = min(all_y + [0.0]), max(all_y + [0.0])
     span = (hi - lo) or 1.0
@@ -45,6 +50,8 @@ def _svg_lines(series, labels, colors, width=880, height=300, pad=46):
         parts.append(f'<text x="2" y="{y + 4:.1f}" fill="#94a3b8" '
                      f'font-size="10">{_fmt_rs(v)}</text>')
     for s, color in zip(series, colors):
+        if not s:
+            continue
         pts = " ".join(f"{X(i):.1f},{Y(v):.1f}" for i, v in enumerate(s))
         parts.append(f'<polyline points="{pts}" fill="none" '
                      f'stroke="{color}" stroke-width="2.2"/>')
